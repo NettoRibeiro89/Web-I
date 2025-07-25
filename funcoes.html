@@ -1,0 +1,40 @@
+<script>
+
+    function saudacao(nome){
+        return `Olá, ${nome}!`;
+    }
+
+    console.log(saudacao("Lucas"));
+    console.log(saudacao("Fernando"));
+
+    // Função anônima atribuída a uma variável
+    const saudacao2 = function(nome){
+        return `Olá, ${nome}!`;
+    }
+
+    console.log(saudacao2("Ana"))
+    console.log(saudacao2("Maria"))
+
+    // Função de seta (arrow function)
+    const saudacao3 = (nome) => {
+        return `Olá, ${nome}!`;
+    }
+
+    console.log(saudacao3("João"))
+    console.log(saudacao3("Carla"))
+
+    // Função de seta simplificada
+    const saudacao4 = nome => `Olá, ${nome}!`
+    console.log(saudacao4("Pedro"))
+    console.log(saudacao4("Luiza"))
+
+    // Função com retorno implícito
+    const saudacao5 = (nome) => `Olá, ${nome}!`;
+    console.log(saudacao5("Roberto"))
+    console.log(saudacao5("Fernanda"))
+
+    // Função com múltiplos parâmetros
+    const saudacao6 = (nome, idade) => `Olá, ${nome}! Você tem ${idade} anos.`;
+    console.log(saudacao6("Carlos", 30))
+    console.log(saudacao6("Julia", 25))
+</script>

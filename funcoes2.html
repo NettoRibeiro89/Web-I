@@ -1,0 +1,45 @@
+<script>
+    //escopo - define onde suas variáveis e funções são acessíveis
+
+    //escopo global
+    let nome = "João do Escopo";
+
+    function mostrarNome() {
+        console.log(nome);
+    }
+    mostrarNome();
+    
+    //escopo local
+    function exemplo(nome) {
+        let valor = 42
+        console.log(valor);
+    }
+
+    exemplo();
+
+    //console.log(valor);
+
+//O que this - ele representa o contexto de execução atual
+    const pessoa = {
+        nome: "Maria",
+        falar: function() {
+            console.log(`Olá, meu nome é ${this.nome}.`);
+        }
+    };
+
+    pessoa.falar();
+
+    // Função construtora
+    function Carro(marca, modelo) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.exibirInfo = function() {
+            console.log(`Carro: ${this.marca} ${this.modelo}`);
+        };
+    }
+
+    const meuCarro = new Carro("Toyota", "Corolla");
+    meuCarro.exibirInfo();
+
+
+</script>
